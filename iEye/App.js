@@ -1,46 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
 import { ImageBackground, StyleSheet, Text, View } from 'react-native';
 
+const bkgcolor = {uri: "https://i.pinimg.com/originals/5f/61/17/5f6117d56f95567f8d86d8bed38e5c9c.jpg"};
+
 export default function App() {
   return (
-    <View style={styles.top}>
-    <View style={styles.middle1}>
-    <View style={styles.middle2}>
-    <View style={styles.bottom}>
-      <StatusBar style="auto" />
-      </View>
-      </View>
-      </View>
+    <View style={styles.container}>
+    <ImageBackground source={bkgcolor} resizeMode="cover" style={styles.image}>
+    </ImageBackground>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  top: {
+  image: {
     flex: 1,
-    backgroundColor: '#142850',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: "100%",
-    height: 30
+    justifyContent: "center"
   },
-  middle1: {
-    flex: 0.5,
-    backgroundColor: '#27496D',
-    width: "100%",
-    height: 30
+  container: {
+    flex: 1,
   },
-  
-  middle2: {
-    flex: 0.5,
-    backgroundColor: '#0C7B93',
-    width: "100%",
-    height: 30
-  },
-  bottom: {
-    flex: 0.5,
-    backgroundColor: '#00A8CC',
-    width: "100%",
-    height: 30
-  }
 });
